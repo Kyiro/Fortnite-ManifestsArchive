@@ -7,3 +7,4 @@ For Legendary, it should be in `%userprofile%/.config/legendary/manifests`
 # Contributors
 - [SizzyLeaks](https://github.com/SizzyLeaks)
 - [AsrielDev](https://github.com/WorkingRobot) (Without him knowing)
+- [Surething](https://twitter.com/al7sayan)
