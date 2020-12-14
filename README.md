@@ -1,4 +1,3 @@
-
 # Fortnite Manifest Archive
 Manifests can be used for downloading diffrent versions of Fortnite.
 # How can i help?
@@ -7,3 +6,4 @@ If you ever used Manifests, there's a chance you have them somewhere on your dri
 For Legendary, it should be in `%userprofile%/.config/legendary/manifests`
 # Contributors
 - [SizzyLeaks](https://github.com/SizzyLeaks)
+- [AsrielDev](https://github.com/WorkingRobot)
