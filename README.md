@@ -24,6 +24,6 @@ For example:
 
 # Contributors
 - [SizzyLeaks](https://github.com/SizzyLeaks)
-- [AsrielDev](https://github.com/WorkingRobot)
+- [Asriel_Dev](https://github.com/WorkingRobot)
 - [Surething](https://twitter.com/al7sayan)
 - [Samicc](https://github.com/notsamicc)
