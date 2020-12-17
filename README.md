@@ -25,9 +25,16 @@ For example:
 
     legendary -v -y install --manifest "D:/Games/FortniteVersions/4.1.manifest" --download-only --no-install --game-folder "GAME-FOLDER" Fortnite
 
+** Very Easy Way:**
+
+NOTE: This is using a modified version of Legendary and needs no auth
+
+Start download.py and select a version, path to save the game
+
 # Contributors
 - [SizzyLeaks](https://github.com/SizzyLeaks)
 - [Asriel_Dev](https://github.com/WorkingRobot)
 - [Surething](https://twitter.com/al7sayan)
 - [Samicc](https://github.com/notsamicc)
 - [Cyuubi](https://github.com/Cyuubi)
+- [Lupus](https://github.com/EZFNDEV)
