@@ -20,10 +20,10 @@ Download legendary_launch.bat from the repo and the manifest you want to install
 
 **Manually:**
 
-If you're using Legendary, instead of using the `--manifest` flag, you have to use `--delta-manifest` along with a path to a .MANIFEST file.
+If you're using Legendary, use the `--manifest` flag along with a path to a .MANIFEST file.
 For example:
 
-    legendary -v -y install --delta-manifest "D:/Games/FortniteVersions/4.1.manifest" --download-only --no-install --game-folder "GAME-FOLDER" Fortnite
+    legendary -v -y install --manifest "D:/Games/FortniteVersions/4.1.manifest" --download-only --no-install --game-folder "GAME-FOLDER" Fortnite
 
 # Contributors
 - [SizzyLeaks](https://github.com/SizzyLeaks)
