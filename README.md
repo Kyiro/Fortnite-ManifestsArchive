@@ -12,7 +12,10 @@ If you never used Legendary before, I recommend reading its [README](https://git
 
 **Easy Way:**
 
+NOTE: Please update Legendary before using it.
+
 Download legendary_launch.bat from the repo and the manifest you want to install and follow the GIF below.
+
 ![GIF](https://i.imgur.com/nbKV9xc.gif)
 
 **Manually:**
@@ -27,3 +30,4 @@ For example:
 - [Asriel_Dev](https://github.com/WorkingRobot)
 - [Surething](https://twitter.com/al7sayan)
 - [Samicc](https://github.com/notsamicc)
+- [Cyuubi](https://github.com/Cyuubi)
