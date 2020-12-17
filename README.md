@@ -25,7 +25,7 @@ For example:
 
     legendary -v -y install --manifest "D:/Games/FortniteVersions/4.1.manifest" --download-only --no-install --game-folder "GAME-FOLDER" Fortnite
 
-** Very Easy Way:**
+**Very Easy Way:**
 
 NOTE: This is using a modified version of Legendary and needs no auth
 
