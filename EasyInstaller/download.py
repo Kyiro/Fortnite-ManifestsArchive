@@ -126,7 +126,7 @@ def main():
     print(f'\nTotal: {len(versions)}')
 
     idx = int(input('Please enter the number before the Build Version to select it: '))
-    game_folder = input('Please enter a game folder location: ')
+    game_folder = input('Please enter a game folder location: ').replace('"', '')
 
     if '-Windows' in versions_s[idx]:
         override_base_url = 'https://epicgames-download1.akamaized.net/Builds/Fortnite/CloudDir'
