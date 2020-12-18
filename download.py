@@ -117,7 +117,7 @@ class LegendaryCLI:
             logger.info(f'Finished installation process in {end_t - start_t:.02f} seconds.')
 
 def main():
-    versions = requests.get('https://raw.githubusercontent.com/EZFNDEV/Fortnite-ManifestsArchive/master/Manifests.json').json()
+    versions = requests.get('https://raw.githubusercontent.com/realkyro/Fortnite-ManifestsArchive/master/Manifests.json').json()
     versions_s = sorted(versions.keys(), key=lambda x: float(str(x.split('-')[1].split('-')[0]).replace('.x', '').replace('Cert', '0')))
 
     print('\nAvailable manifests:')

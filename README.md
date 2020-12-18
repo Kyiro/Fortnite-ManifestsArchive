@@ -18,18 +18,18 @@ Download legendary_launch.bat from the repo and the manifest you want to install
 
 ![GIF](https://i.imgur.com/nbKV9xc.gif)
 
+**Very Easy Way:**
+
+NOTE: This is using a modified version of Legendary and needs no auth. (Made by Lupus)
+
+Download `download.py` and the Legendary directory and do `py -3 download.py` to start the downloader and select a version and a path to save the game.
+
 **Manually:**
 
 If you're using Legendary, use the `--manifest` flag along with a path to a .MANIFEST file.
 For example:
 
     legendary -v -y install --manifest "D:/Games/FortniteVersions/4.1.manifest" --download-only --no-install --game-folder "GAME-FOLDER" Fortnite
-
-**Very Easy Way:**
-
-NOTE: This is using a modified version of Legendary and needs no auth
-
-Start download.py and select a version, path to save the game
 
 # Contributors
 - [SizzyLeaks](https://github.com/SizzyLeaks)
