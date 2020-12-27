@@ -38,3 +38,4 @@ For example:
 - [Samicc](https://github.com/notsamicc)
 - [Cyuubi](https://github.com/Cyuubi)
 - [Lupus](https://github.com/EZFNDEV)
+- [BeatYT](https://github.com/Beat-YT)
