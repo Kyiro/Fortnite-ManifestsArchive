@@ -21,11 +21,9 @@ Download legendary_launch.bat from the repo and the manifest you want to install
 
 **Very Easy Way:**
 
-Requirement: Python installed and added to PATH
-
 NOTE: This is using a modified version of Legendary and needs no auth. (Made by Lupus)
 
-Download the latest release of the EasyInstaller and open `start_download.bat` to start the downloader and select a version and a path to download the version you want.
+Download the latest release of the EasyInstaller (EasyInstaller.exe), open it and select the version you want to download and then provide a directory for it to install in.
 
 **Manually:**
 
