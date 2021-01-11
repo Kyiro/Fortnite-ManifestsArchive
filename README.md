@@ -5,12 +5,13 @@ If you ever used Manifests, there's a chance you have them somewhere on your dri
 
 For Legendary, it should be in `%userprofile%/.config/legendary/manifests`
 # How to use manifest files?
-Requirement: Legenday in PATH
+
+**Easy Way:**
+
+Requirement: Legendary in PATH
 
 
 If you never used Legendary before, I recommend reading its [README](https://github.com/derrod/legendary/blob/master/README.md)
-
-**Easy Way:**
 
 NOTE: Please update Legendary before using it.
 
@@ -19,6 +20,8 @@ Download legendary_launch.bat from the repo and the manifest you want to install
 ![GIF](https://i.imgur.com/nbKV9xc.gif)
 
 **Very Easy Way:**
+
+Requirement: Python installed and added to PATH
 
 NOTE: This is using a modified version of Legendary and needs no auth. (Made by Lupus)
 
