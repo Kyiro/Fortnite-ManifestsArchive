@@ -6,6 +6,16 @@ If you ever used Manifests, there's a chance you have them somewhere on your dri
 For Legendary, it should be in `%userprofile%/.config/legendary/manifests`
 # How to use manifest files?
 
+**Very Easy Way:**
+
+NOTE: This is using a modified version of Legendary and needs no auth. (Made by Lupus)
+
+Download the latest release of the EasyInstaller (EasyInstaller.exe), open it, select the version you want to download and then provide a directory for it to install in.
+
+How it looks like (CLICK ON THE GIF FOR A QUICK TUTORIAL):
+
+[![Foo](https://i.imgur.com/HWrCCci.gif)](https://streamable.com/iwuivs)
+
 **Easy Way:**
 
 Requirement: Legendary in PATH
@@ -18,12 +28,6 @@ NOTE: Please update Legendary before using it.
 Download legendary_launch.bat from the repo and the manifest you want to install and follow the GIF below.
 
 ![GIF](https://i.imgur.com/nbKV9xc.gif)
-
-**Very Easy Way:**
-
-NOTE: This is using a modified version of Legendary and needs no auth. (Made by Lupus)
-
-Download the latest release of the EasyInstaller (EasyInstaller.exe), open it and select the version you want to download and then provide a directory for it to install in.
 
 **Manually:**
 
