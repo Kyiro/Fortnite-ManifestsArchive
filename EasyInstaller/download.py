@@ -136,7 +136,9 @@ def main():
     cli = LegendaryCLI()
     cli.install_game(versions[versions_s[idx]], game_folder, override_base_url)
     cli.core.exit()
-    exit(0)
+    print("Downloading finished!")
+    print("You can close this windows now")
+    input()
 
 if __name__ == '__main__':
     # required for pyinstaller on Windows, does nothing on other platforms.
