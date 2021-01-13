@@ -126,7 +126,12 @@ def main():
     print(f'\nTotal: {len(versions)}')
 
     idx = int(input('Please enter the number before the Build Version to select it: '))
-    game_folder = input('Please enter a game folder location: ').replace('"', '')
+    game_folder = input('Please enter a game folder location: ')
+
+    path_block = [ '*', '?', '"', '<', '>', '|' ]
+
+    for x in path_block:
+        game_folder = game_folder.replace(x, '')
 
     if '-Windows' in versions_s[idx]:
         override_base_url = 'https://epicgames-download1.akamaized.net/Builds/Fortnite/CloudDir'
@@ -136,9 +141,9 @@ def main():
     cli = LegendaryCLI()
     cli.install_game(versions[versions_s[idx]], game_folder, override_base_url)
     cli.core.exit()
-    print("Downloading finished!")
-    print("You can close this windows now")
-    input()
+    print("Download finished!")
+    print("You can close this window now")
+    input('')
 
 if __name__ == '__main__':
     # required for pyinstaller on Windows, does nothing on other platforms.
