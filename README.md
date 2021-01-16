@@ -2,7 +2,7 @@
 Manifests can be used for downloading diffrent versions of Fortnite.
 
 # EasyInstaller TODO
-- GUI
+- GUI ([Still considered. Click to vote!](https://www.strawpoll.me/42455227))
 - Error Handling
 - Easily continue installs
 
