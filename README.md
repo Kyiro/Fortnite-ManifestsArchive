@@ -1,11 +1,6 @@
 # Fortnite Manifest Archive
 Manifests can be used for downloading diffrent versions of Fortnite.
 
-# EasyInstaller TODO
-- GUI ([Still considered. Click to vote!](https://www.strawpoll.me/42455227))
-- Error Handling
-- Easily continue installs
-
 # How can i help?
 If you ever used Manifests, there's a chance you have them somewhere on your drive. You can Send them to me on Discord (Kyiro#4383) or make a PR. I'd appriceate it
 

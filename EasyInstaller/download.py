@@ -16,7 +16,7 @@ from distutils.util import strtobool
 from getpass import getuser
 from logging.handlers import QueueListener
 from multiprocessing import freeze_support, Queue as MPQueue
-from sys import exit, stdout
+from sys import exit, stdout, platform
 
 from legendary import __version__, __codename__
 from legendary.core import LegendaryCore
@@ -78,7 +78,7 @@ class LegendaryCLI:
                     f'(Compression savings: {compression:.01f}%)')
         logger.info(f'Reusable size: {analysis.reuse_size / 1024 / 1024:.02f} MiB (chunks) / '
                     f'{analysis.unchanged / 1024 / 1024:.02f} MiB (unchanged / skipped)')
-
+                    
         res = self.core.check_installation_conditions(analysis=analysis, install=igame, game=game,updating=False,ignore_space_req=None)
 
         if res.warnings or res.failures:
@@ -92,7 +92,8 @@ class LegendaryCLI:
             for msg in sorted(res.failures):
                 logger.fatal(msg)
             logger.error('Installation cannot proceed, exiting.')
-            exit(1)
+            if not input('Do you want to continue anyway (y/N): ').lower().startswith('y'):
+                exit(1)
 
         logger.info('Downloads are resumable, you can interrupt the download with '
                     'CTRL-C and resume it using the same command later on.')
@@ -119,28 +120,61 @@ class LegendaryCLI:
 def main():
     versions = requests.get('https://raw.githubusercontent.com/realkyro/Fortnite-ManifestsArchive/master/Manifests.json').json()
     versions_s = sorted(versions.keys(), key=lambda x: float(str(x.split('-')[1].split('-')[0]).replace('.x', '').replace('Cert', '0')))
+    
+    if platform.startswith('win32'):
+        installations = os.getenv('APPDATA')
+    else:
+        installations = './'
+        
+    if not os.path.isdir(installations + '/EasyInstaller'):
+        os.mkdir(installations + '/EasyInstaller')
+        
+    installations = installations + '/EasyInstaller/installations.json'
+    
+    if not os.path.isfile(installations):
+        json.dump([], open(installations, 'w'))
+    
+    file = json.load(open(installations))
 
     print('\nAvailable manifests:')
     for idx, build_version_string in enumerate(versions_s):
         print(f' * [{idx}] {build_version_string}')
     print(f'\nTotal: {len(versions)}')
-
-    idx = int(input('Please enter the number before the Build Version to select it: '))
-    game_folder = input('Please enter a game folder location: ')
-
-    path_block = [ '*', '?', '"', '<', '>', '|' ]
-
-    for x in path_block:
-        game_folder = game_folder.replace(x, '')
-
-    if '-Windows' in versions_s[idx]:
-        override_base_url = 'https://epicgames-download1.akamaized.net/Builds/Fortnite/CloudDir'
-    else:
-        override_base_url = 'https://epicgames-download1.akamaized.net/Builds/Fortnite/Content/CloudDir'
-
+    if len(file) > 0:
+        print(f'Type C, if you want to continue any of {len(file)} download(s)')
+        
     cli = LegendaryCLI()
-    cli.install_game(versions[versions_s[idx]], game_folder, override_base_url)
-    cli.core.exit()
+    
+    idx = input('Please enter the number before the Build Version to select it: ')
+    if idx.lower().startswith('c') and len(file) > 0:
+        for x, y in enumerate(file):
+            print(f' * [{x}] {y["name"]} | {y["game_folder"]}')
+        idx = int(input('Please enter a number of the version you want to continue downloading: '))
+        cli.install_game(file[idx]["version"], file[idx]["game_folder"], file[idx]["override_base_url"])
+    else:
+        idx = int(idx)
+        game_folder = input('Please enter a game folder location: ')
+
+        path_block = [ '*', '?', '"', '<', '>', '|' ]
+
+        for x in path_block:
+            game_folder = game_folder.replace(x, '')
+
+        if '-Windows' in versions_s[idx]:
+            override_base_url = 'https://epicgames-download1.akamaized.net/Builds/Fortnite/CloudDir'
+        else:
+            override_base_url = 'https://epicgames-download1.akamaized.net/Builds/Fortnite/Content/CloudDir'
+
+        with open(installations, "w") as write_file:
+            file.append({
+                "name": versions_s[idx],
+                "version": versions[versions_s[idx]],
+                "override_base_url": override_base_url,
+                "game_folder": game_folder
+            })
+            json.dump(file, write_file)
+        cli.install_game(versions[versions_s[idx]], game_folder, override_base_url)
+        cli.core.exit()
     print("Download finished!")
     print("You can close this window now")
     input('')
