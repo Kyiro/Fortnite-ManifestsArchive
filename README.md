@@ -44,7 +44,7 @@ For example:
 - [Asriel_Dev](https://github.com/WorkingRobot)
 - [Surething](https://twitter.com/al7sayan)
 - [Samicc](https://github.com/notsamicc)
-- [Cyuubi](https://github.com/Cyuubi)
+- [nyamimi (Cyuubi)](https://github.com/nyamimi)
 - [Lupus](https://github.com/EZFNDEV)
 - [BeatYT](https://github.com/Beat-YT)
 - [Lawin](https://github.com/Lawin0129)
