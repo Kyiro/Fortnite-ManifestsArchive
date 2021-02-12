@@ -48,3 +48,4 @@ For example:
 - [Lupus](https://github.com/EZFNDEV)
 - [BeatYT](https://github.com/Beat-YT)
 - [Lawin](https://github.com/Lawin0129)
+- [Nutterthanos](https://github.com/Nutterthanos)
