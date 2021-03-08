@@ -1,3 +1,5 @@
+# THIS REPO HAS BEEN ARCHIVED. NO SUPPORT WILL BE GIVEN
+**https://github.com/VastBlast/FortniteManifestArchive is a pretty good alternative**
 # Fortnite Manifest Archive
 Manifests can be used for downloading diffrent versions of Fortnite.
 

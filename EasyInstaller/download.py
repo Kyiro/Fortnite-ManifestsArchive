@@ -142,6 +142,7 @@ def main():
     print(f'\nTotal: {len(versions)}')
     if len(file) > 0:
         print(f'Type C, if you want to continue any of {len(file)} download(s)')
+    print("Type D, if you want to use a custom manifest")
         
     cli = LegendaryCLI()
     
@@ -151,6 +152,26 @@ def main():
             print(f' * [{x}] {y["name"]} | {y["game_folder"]}')
         idx = int(input('Please enter a number of the version you want to continue downloading: '))
         cli.install_game(file[idx]["version"], file[idx]["game_folder"], file[idx]["override_base_url"])
+    if idx.lower().startswith('d'):
+        manifest_url = input('Please input a custom manifest directory/url: ')
+        game_folder = input('Please enter a game folder location: ')
+
+        path_block = [ '*', '?', '"', '<', '>', '|' ]
+
+        for x in path_block:
+            game_folder = game_folder.replace(x, '')
+
+        with open(installations, "w") as write_file:
+            file.append({
+                "name": manifest_url,
+                "version": manifest_url,
+                "override_base_url": "https://epicgames-download1.akamaized.net/Builds/Fortnite/CloudDir",
+                "game_folder": game_folder
+            })
+            json.dump(file, write_file)
+        # Yep, no android manifest support
+        cli.install_game(manifest_url, game_folder, "https://epicgames-download1.akamaized.net/Builds/Fortnite/CloudDir")
+        cli.core.exit()
     else:
         idx = int(idx)
         game_folder = input('Please enter a game folder location: ')
@@ -174,10 +195,10 @@ def main():
             })
             json.dump(file, write_file)
         cli.install_game(versions[versions_s[idx]], game_folder, override_base_url)
-        cli.core.exit()
+    cli.core.exit()
     print("Credits:")
     print("Derrod for creating legendary")
-    print("Lupus for contributing EasyInstaller")
+    print("Lupus for originally creating EasyInstaller")
     print("Kyiro for maintaining EasyInstaller")
     print("Download finished!")
     print("You can close this window now")
